@@ -1,0 +1,101 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "betting-bot"
+version = "0.1.0"
+description = "Professional football betting bot with statistical analysis and ML models"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+
+authors = [
+    { name = "Developer" },
+]
+
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "scikit-learn>=1.4.0",
+    "xgboost>=2.0.0",
+    "lightgbm>=4.3.0",
+    "catboost>=1.2.0",
+    "sqlalchemy>=2.0.25",
+    "asyncpg>=0.29.0",
+    "psycopg2-binary>=2.9.9",
+    "alembic>=1.13.0",
+    "httpx>=0.26.0",
+    "tenacity>=8.2.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "python-dotenv>=1.0.0",
+    "loguru>=0.7.2",
+    "shap>=0.44.0",
+    "optuna>=3.5.0",
+    "joblib>=1.3.0",
+    "python-dateutil>=2.8.0",
+    "tqdm>=4.66.0",
+    "pyarrow>=15.0.0",
+    "rich>=13.7.0",
+    "tabulate>=0.9.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["data*", "docker*", "docs*", "frontend*", "logs*", "notebooks*", "scripts*", "tests*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=24.0.0",
+    "ruff>=0.2.0",
+    "mypy>=1.8.0",
+    "pre-commit>=3.6.0",
+    "ipykernel>=6.29.0",
+    "jupyter>=1.0.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+include = '\.py$'
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "ARG"]
+ignore = ["UP042"]  # StrEnum vs str,Enum — style choice, consistent across codebase
+
+[tool.ruff.lint.per-file-ignores]
+# ML code uses uppercase X for feature matrices (scikit-learn convention)
+"betting_bot/models/classifiers/*" = ["N803", "N806", "ARG002"]
+"betting_bot/models/ensemble/*" = ["N803", "N806"]
+"betting_bot/training/*" = ["N803", "N806", "ARG002"]
+"betting_bot/prediction/*" = ["N803", "N806", "ARG002"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+asyncio_mode = "auto"
+addopts = "-v --tb=short --cov=betting_bot --cov-report=term-missing"
+
+[project.scripts]
+betting-bot = "betting_bot.cli:main"

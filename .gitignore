@@ -1,0 +1,81 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.env.local
+.venv
+venv/
+env/
+ENV/
+virtualenv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project data
+data/raw/*
+data/processed/*
+data/models/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+data/cache/*
+!data/cache/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Notebooks
+notebooks/.ipynb_checkpoints/
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
+# Docker
+docker/data/
+
+# Testing
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+.pytest_cache/
+
+# Build
+*.egg-info/
+dist/
+build/
+*.whl
+
+# OS
+Thumbs.db
+*.log
+
+# Frontend
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+frontend/.turbo/
+
+# Python
+node_modules/
+*.pyc
+*.joblib
+*.joblib.meta.json
+
+# Temp / debug files
+_debug_*.py
+_show_*.py
+_feature_names.json
+train_goals.py
+predict_all.py

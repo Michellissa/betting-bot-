@@ -1,0 +1,17 @@
+.env
+.git
+.gitignore
+__pycache__/
+*.py[cod]
+*.egg-info/
+.gitkeep
+data/raw/
+data/processed/
+data/models/
+data/cache/
+logs/
+notebooks/
+tests/
+.idea/
+.vscode/
+*.md
