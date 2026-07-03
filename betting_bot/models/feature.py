@@ -144,6 +144,21 @@ class FeatureStore(IntegerIDMixin, TimestampMixin, Base):
     wind_speed: Mapped[float | None] = MappedColumn(Float)
     weather_condition: Mapped[str | None] = MappedColumn(String(100))
 
+    # Pre-match odds features (from football-data.co.uk)
+    odds_home_prob: Mapped[float | None] = MappedColumn(Float)
+    odds_draw_prob: Mapped[float | None] = MappedColumn(Float)
+    odds_away_prob: Mapped[float | None] = MappedColumn(Float)
+    odds_overround: Mapped[float | None] = MappedColumn(Float)
+    odds_home_odds_raw: Mapped[float | None] = MappedColumn(Float)
+    odds_draw_odds_raw: Mapped[float | None] = MappedColumn(Float)
+    odds_away_odds_raw: Mapped[float | None] = MappedColumn(Float)
+    odds_source: Mapped[str | None] = MappedColumn(String(20))
+
+    # Player availability features (from API-Football injuries endpoint)
+    home_missing_players_count: Mapped[float | None] = MappedColumn(Float)
+    away_missing_players_count: Mapped[float | None] = MappedColumn(Float)
+    player_data_available: Mapped[str | None] = MappedColumn(String(20))
+
     # Referee
     referee_id: Mapped[int | None] = MappedColumn(Integer)
     referee_home_win_rate: Mapped[float | None] = MappedColumn(Float)

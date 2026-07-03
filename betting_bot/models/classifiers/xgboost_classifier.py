@@ -88,7 +88,10 @@ class XGBoostClassifier(BaseClassifier):
         import json
 
         meta_path = Path(str(path) + ".meta.json")
-        meta_path.write_text(json.dumps({"feature_names": self._feature_names}))
+        meta_path.write_text(json.dumps({
+            "feature_names": self._feature_names,
+            "odds_imputer": getattr(self, "_odds_imputer", None),
+        }))
 
     @classmethod
     def load(cls, path: str | Path) -> "XGBoostClassifier":
@@ -101,7 +104,11 @@ class XGBoostClassifier(BaseClassifier):
         instance._model.load_model(str(path))
         meta_path = Path(str(path) + ".meta.json")
         if meta_path.exists():
-            instance._feature_names = json.loads(meta_path.read_text()).get("feature_names", [])
+            meta = json.loads(meta_path.read_text())
+            instance._feature_names = meta.get("feature_names", [])
+            imputer = meta.get("odds_imputer")
+            if imputer is not None:
+                instance._odds_imputer = imputer
         return instance
 
     @property

@@ -53,9 +53,23 @@ class EnsembleManager:
 
     @classmethod
     def create_classifier_from_name(cls, model_name: str, **params) -> BaseClassifier:
-        """Create a classifier from a string model name."""
+        """Create a classifier from a string model name.
+
+        Accepts both enum values (e.g. 'random_forest') and sklearn
+        class names (e.g. 'RandomForestClassifier').
+        """
         name_map = {m.value: m for m in ModelName}
         enum_val = name_map.get(model_name)
+        if enum_val is None:
+            # Fallback: map sklearn class names to enum values
+            class_to_enum = {
+                "RandomForestClassifier": ModelName.RANDOM_FOREST,
+                "XGBClassifier": ModelName.XGBOOST,
+                "LGBMClassifier": ModelName.LIGHTGBM,
+                "CatBoostClassifier": ModelName.CATBOOST,
+                "LogisticRegression": ModelName.LOGISTIC_REGRESSION,
+            }
+            enum_val = class_to_enum.get(model_name)
         if enum_val is None:
             available = list(name_map.keys())
             raise ValueError(f"Unknown model name: {model_name}. Available: {available}")

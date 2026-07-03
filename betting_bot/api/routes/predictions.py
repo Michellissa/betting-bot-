@@ -102,7 +102,7 @@ async def predict_match(
     )
 
 
-@router.get("/upcoming", response_model=list[PredictionListResponse])
+@router.get("/upcoming")
 async def upcoming_predictions(
     limit: int = Query(20, ge=1, le=100),
     db: AsyncSession = Depends(get_db),
@@ -128,8 +128,19 @@ async def upcoming_predictions(
             return f"{round(home)}-{round(away)}"
         return None
 
-    return [
-        PredictionListResponse(
+    result_list = []
+    for p in predictions:
+        match_resp = dict(
+            id=p.match.id,
+            match_date=str(p.match.match_date),
+            round=p.match.round,
+            is_finished=p.match.is_finished,
+            home_team=dict(id=p.match.home_team.id, name=p.match.home_team.name) if p.match.home_team else None,
+            away_team=dict(id=p.match.away_team.id, name=p.match.away_team.name) if p.match.away_team else None,
+            league=dict(id=p.match.league.id, name=p.match.league.name) if p.match.league else None,
+        ) if p.match else None
+        
+        item = dict(
             id=p.id,
             match_id=p.match_id,
             model_name=p.model_name,
@@ -147,22 +158,14 @@ async def upcoming_predictions(
             confidence_level=p.confidence_level,
             risk_score=p.risk_score or 0.0,
             risk_level=p.risk_level,
-            prediction_date=p.prediction_date,
+            prediction_date=str(p.prediction_date),
             is_active=p.is_active,
             model_version=p.model_version,
             explanation=p.explanation,
-            match=MatchResponse(
-                id=p.match.id,
-                match_date=p.match.match_date,
-                round=p.match.round,
-                is_finished=p.match.is_finished,
-                home_team=TeamResponse(id=p.match.home_team.id, name=p.match.home_team.name) if p.match.home_team else None,
-                away_team=TeamResponse(id=p.match.away_team.id, name=p.match.away_team.name) if p.match.away_team else None,
-                league=LeagueResponse(id=p.match.league.id, name=p.match.league.name) if p.match.league else None,
-            ) if p.match else None,
+            match=match_resp,
         )
-        for p in predictions
-    ]
+        result_list.append(item)
+    return result_list
 
 
 @router.get("/today")

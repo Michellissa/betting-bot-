@@ -79,3 +79,7 @@ _show_*.py
 _feature_names.json
 train_goals.py
 predict_all.py
+tmp_body.json
+
+# CatBoost artifacts
+catboost_info/

@@ -38,11 +38,7 @@ class ApiFootballClient(BaseAPIClient):
         )
 
     def _get_headers(self) -> dict[str, str]:
-        settings = get_settings()
-        return {
-            "x-rapidapi-key": self.api_key,
-            "x-rapidapi-host": settings.API_FOOTBALL_HOST,
-        }
+        return {"x-apisports-key": self.api_key}
 
     async def get_leagues(self) -> list[dict[str, Any]]:
         """Get all available leagues."""
@@ -174,8 +170,15 @@ class ApiFootballClient(BaseAPIClient):
         season: int | None = None,
         team_id: int | None = None,
         fixture_id: int | None = None,
+        date: str | None = None,
     ) -> list[dict[str, Any]]:
-        """Get injury data."""
+        """Get injury data.
+
+        Supports querying by league+season (returns all injuries for a season),
+        by fixture, by team+season, by date, or combinations thereof.
+
+        Data available from April 2021 onwards.
+        """
         params: dict[str, Any] = {}
         if league_id:
             params["league"] = league_id
@@ -185,8 +188,40 @@ class ApiFootballClient(BaseAPIClient):
             params["team"] = team_id
         if fixture_id:
             params["fixture"] = fixture_id
+        if date:
+            params["date"] = date
         data = await self.get("injuries", params=params)
         return data.get("response", [])
+
+    async def get_odds(
+        self,
+        fixture_id: int | None = None,
+        league_id: int | None = None,
+        season: int | None = None,
+        date: str | None = None,
+        bookmaker_id: int | None = None,
+        page: int = 1,
+    ) -> dict[str, Any]:
+        """Get odds for a fixture, league, or date.
+
+        Returns the full API response dict with 'results' and 'response' keys.
+        """
+        params: dict[str, Any] = {}
+        if fixture_id:
+            params["fixture"] = fixture_id
+        if league_id:
+            params["league"] = league_id
+        if season:
+            params["season"] = season
+        if date:
+            params["date"] = date
+        if bookmaker_id:
+            params["bookmaker"] = bookmaker_id
+        if page > 1:
+            params["page"] = page
+
+        data = await self.get("odds", params=params)
+        return data
 
     async def get_predictions(self, fixture_id: int) -> dict[str, Any]:
         """Get API-Football predictions for a fixture."""

@@ -201,20 +201,60 @@ class PredictionGenerator:
                 "created_at", "updated_at",
                 "temperature", "humidity", "wind_speed", "weather_condition",
                 "referee_id", "referee_home_win_rate",
+                "odds_source", "player_data_available",
             )
+        ]
+        sparse_cols = [
+            "odds_home_prob", "odds_draw_prob", "odds_away_prob",
+            "odds_overround", "odds_home_odds_raw", "odds_draw_odds_raw",
+            "odds_away_odds_raw",
+            "home_missing_players_count", "away_missing_players_count",
         ]
         values = []
         active_columns = []
         for col in feature_columns:
             val = getattr(fs, col, None)
-            if val is not None:
-                values.append(float(val))
-                active_columns.append(col)
+            if col in sparse_cols:
+                values.append(float(val) if val is not None else np.nan)
             else:
-                values.append(0.0)
-                active_columns.append(col)
+                values.append(float(val) if val is not None else 0.0)
+            active_columns.append(col)
+
+        # Add odds_missing indicator
+        odds_cols_subset = sparse_cols[:7]
+        odds_none = any(getattr(fs, c, None) is None for c in odds_cols_subset if c in feature_columns)
+        values.append(1.0 if odds_none else 0.0)
+        active_columns.append("odds_missing")
+
+        # Add player_data_missing indicator
+        player_cols_subset = ["home_missing_players_count", "away_missing_players_count"]
+        player_none = any(getattr(fs, c, None) is None for c in player_cols_subset if c in feature_columns)
+        values.append(1.0 if player_none else 0.0)
+        active_columns.append("player_data_missing")
 
         return np.array([values], dtype=np.float64), active_columns
+
+    @staticmethod
+    def _apply_odds_imputation(
+        X: npt.NDArray[np.float64],
+        clf: BaseClassifier,
+    ) -> npt.NDArray[np.float64]:
+        """Apply training-time odds imputation to inference features.
+
+        Uses stored medians from the classifier's ``_odds_imputer``.
+        Models with native NaN support (RF, XGBoost, etc.) skip imputation.
+        """
+        imputer = getattr(clf, "_odds_imputer", None)
+        if imputer is None or not imputer.get("odds_medians"):
+            return X
+
+        indices = imputer.get("odds_column_indices", [])
+        medians = imputer["odds_medians"]
+        for col_idx, median in zip(indices, medians):
+            if np.isnan(X[0, col_idx]):
+                X[0, col_idx] = median
+
+        return X
 
     async def predict_match(
         self,
@@ -245,6 +285,9 @@ class PredictionGenerator:
         except ValueError as e:
             logger.error(f"Cannot get features: {e}")
             return None
+
+        # Apply odds imputation using stored model medians
+        X = self._apply_odds_imputation(X, result_clf)
 
         # Load FeatureStore for expected goals computation
         fs_repo = BaseRepository(FeatureStore, self.db)
@@ -511,8 +554,11 @@ class PredictionGenerator:
             home_reg, _ = await self._load_regressor_by_target("home_goals")
             away_reg, _ = await self._load_regressor_by_target("away_goals")
             if home_reg is not None and away_reg is not None:
-                home_pred = float(home_reg.predict(X)[0])
-                away_pred = float(away_reg.predict(X)[0])
+                # Handle dimension mismatch: regressors may not have odds_missing
+                n_expected = getattr(home_reg._model, "n_features_in_", X.shape[1])
+                X_reg = X[:, :n_expected] if X.shape[1] > n_expected else X
+                home_pred = float(home_reg.predict(X_reg)[0])
+                away_pred = float(away_reg.predict(X_reg)[0])
                 return max(0.0, home_pred), max(0.0, away_pred)
         except Exception as e:
             logger.debug(f"Goal regression unavailable: {e}")

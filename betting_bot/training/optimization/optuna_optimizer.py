@@ -8,7 +8,7 @@ import numpy.typing as npt
 import optuna
 from loguru import logger
 from sklearn.metrics import log_loss
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import TimeSeriesSplit
 
 
 class OptunaOptimizer:
@@ -41,14 +41,10 @@ class OptunaOptimizer:
 
             self.model_class(random_state=self.random_state, **params)
 
-            skf = StratifiedKFold(
-                n_splits=self.cv_folds,
-                shuffle=True,
-                random_state=self.random_state,
-            )
+            tscv = TimeSeriesSplit(n_splits=self.cv_folds)
 
             losses = []
-            for train_idx, val_idx in skf.split(X, y):
+            for train_idx, val_idx in tscv.split(X):
                 X_train, X_val = X[train_idx], X[val_idx]
                 y_train, y_val = y[train_idx], y[val_idx]
 

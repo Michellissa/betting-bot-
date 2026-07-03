@@ -50,7 +50,11 @@ class LogisticRegressionClassifier(BaseClassifier):
         return self._model.predict_proba(X)
 
     def save(self, path: str | Path) -> None:
-        joblib.dump({"model": self._model, "feature_names": self._feature_names}, path)
+        joblib.dump({
+            "model": self._model,
+            "feature_names": self._feature_names,
+            "odds_imputer": getattr(self, "_odds_imputer", None),
+        }, path)
 
     @classmethod
     def load(cls, path: str | Path) -> "LogisticRegressionClassifier":
@@ -58,6 +62,9 @@ class LogisticRegressionClassifier(BaseClassifier):
         instance = cls()
         instance._model = data["model"]
         instance._feature_names = data.get("feature_names", [])
+        imputer = data.get("odds_imputer")
+        if imputer is not None:
+            instance._odds_imputer = imputer
         return instance
 
     @property

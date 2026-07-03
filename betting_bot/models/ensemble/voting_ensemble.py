@@ -69,6 +69,7 @@ class VotingEnsemble(BaseClassifier):
             ],
             "weights": self.weights,
             "feature_names": self._feature_names,
+            "odds_imputer": getattr(self, "_odds_imputer", None),
         }
         joblib.dump(data, path)
         base = Path(path)
@@ -92,6 +93,9 @@ class VotingEnsemble(BaseClassifier):
         instance.classifiers = classifiers
         instance.weights = data.get("weights")
         instance._feature_names = data.get("feature_names", [])
+        imputer = data.get("odds_imputer")
+        if imputer is not None:
+            instance._odds_imputer = imputer
         instance._is_fitted = True
         return instance
 
