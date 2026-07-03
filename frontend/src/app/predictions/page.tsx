@@ -150,6 +150,7 @@ export default async function PredictionsPage() {
                       draw={pred.draw_probability}
                       awayWin={pred.away_win_probability}
                       confidence={pred.confidence_score}
+                      dataConfidence={pred.data_confidence_score}
                       over25={pred.over_2_5_probability}
                       bttsYes={pred.btts_yes_probability}
                       predictedScore={pred.predicted_score}
@@ -163,9 +164,18 @@ export default async function PredictionsPage() {
                       </div>
                     )}
 
-                    <div className="flex items-center gap-1.5 mt-3 pt-3 border-t border-zinc-100">
-                      <ConfidenceDot level={pred.confidence_level} />
-                      <span className="text-xs text-zinc-500">{pred.confidence_level.replace("_", " ")} confidence</span>
+                    <div className="flex items-center gap-3 mt-3 pt-3 border-t border-zinc-100">
+                      <div className="flex items-center gap-1.5">
+                        <ConfidenceDot level={pred.confidence_level} />
+                        <span className="text-xs text-zinc-500">{pred.confidence_level.replace("_", " ")}</span>
+                      </div>
+                      {pred.data_confidence_score !== null && pred.data_confidence_score !== undefined && (
+                        <span className={`text-xs font-medium ${
+                          pred.data_confidence_score >= 0.7 ? "text-emerald-600" : pred.data_confidence_score >= 0.4 ? "text-amber-600" : "text-red-600"
+                        }`}>
+                          Data: {(pred.data_confidence_score * 100).toFixed(0)}%
+                        </span>
+                      )}
                     </div>
                   </div>
                 );

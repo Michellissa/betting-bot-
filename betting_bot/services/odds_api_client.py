@@ -18,6 +18,16 @@ SPORT_KEY_MAP = {
     "ELC": "soccer_england_championship",
     "DED": "soccer_netherlands_eredivisie",
     "PPL": "soccer_portugal_primeira_liga",
+    "FIFA WORLD": "soccer_fifa_world_cup",
+}
+
+# Team name mapping from our DB (WC26 / StatsBomb) to The Odds API names
+ODDS_API_TEAM_MAP = {
+    "United States": "USA",
+    "Cape Verde Islands": "Cape Verde",
+    "Bosnia & Herzegovina": "Bosnia and Herzegovina",
+    "German DR": "East Germany",
+    "Czechoslovakia": "Czechoslovakia",
 }
 
 REGIONS = ["uk", "eu", "us"]

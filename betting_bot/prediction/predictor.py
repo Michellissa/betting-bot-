@@ -2,6 +2,7 @@
 
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 import numpy.typing as npt
@@ -15,9 +16,10 @@ from betting_bot.database.repositories.base import BaseRepository
 from betting_bot.features.pipelines.base_pipeline import FeatureEngineeringService
 from betting_bot.models.classifiers.base_classifier import BaseClassifier
 from betting_bot.models.feature import FeatureStore
-from betting_bot.models.match import Match
+from betting_bot.models.match import Match, League
 from betting_bot.models.model_registry import ModelRegistry
 from betting_bot.models.prediction import ModelPrediction, Prediction
+from betting_bot.services.odds_api_client import OddsAPIClient, SPORT_KEY_MAP, ODDS_API_TEAM_MAP
 
 
 class PredictionGenerator:
@@ -160,38 +162,45 @@ class PredictionGenerator:
         return reg, info
 
     async def get_features_for_match(
-        self, match_id: int
+        self, match_id: int, fs: FeatureStore | None = None
     ) -> tuple[npt.NDArray[np.float64], list[str]]:
-        """Get feature vector for a match from FeatureStore."""
+        """Get feature vector for a match from FeatureStore.
+
+        Args:
+            match_id: The match to get features for.
+            fs: Optional pre-loaded FeatureStore row (e.g. with live odds injected).
+                 If None, loads from DB or computes on the fly.
+        """
         repo = BaseRepository(FeatureStore, self.db)
-        fs = await repo.get_by(match_id=match_id, feature_version=self.feature_version)
-
         if fs is None:
-            logger.info(f"No features found for match {match_id}, computing...")
-            svc = FeatureEngineeringService(self.db, self.feature_version)
-            from betting_bot.features.pipelines.advanced_features import AdvancedFeaturesPipeline
-            from betting_bot.features.pipelines.elo_features import EloFeaturesPipeline
-            from betting_bot.features.pipelines.form_features import FormFeaturesPipeline
-            from betting_bot.features.pipelines.goal_features import GoalFeaturesPipeline
-            from betting_bot.features.pipelines.h2h_features import H2HFeaturesPipeline
-            from betting_bot.features.pipelines.xg_features import XgFeaturesPipeline
-
-            svc.add_pipelines([
-                FormFeaturesPipeline(self.db),
-                GoalFeaturesPipeline(self.db),
-                XgFeaturesPipeline(self.db),
-                EloFeaturesPipeline(self.db),
-                H2HFeaturesPipeline(self.db),
-                AdvancedFeaturesPipeline(self.db),
-            ])
-            features = await svc.compute_match_features(match_id)
-            if features:
-                await svc.store_features(match_id, features)
-                await self.db.commit()
             fs = await repo.get_by(match_id=match_id, feature_version=self.feature_version)
 
-        if fs is None:
-            raise ValueError(f"Could not compute features for match {match_id}")
+            if fs is None:
+                logger.info(f"No features found for match {match_id}, computing...")
+                svc = FeatureEngineeringService(self.db, self.feature_version)
+                from betting_bot.features.pipelines.advanced_features import AdvancedFeaturesPipeline
+                from betting_bot.features.pipelines.elo_features import EloFeaturesPipeline
+                from betting_bot.features.pipelines.form_features import FormFeaturesPipeline
+                from betting_bot.features.pipelines.goal_features import GoalFeaturesPipeline
+                from betting_bot.features.pipelines.h2h_features import H2HFeaturesPipeline
+                from betting_bot.features.pipelines.xg_features import XgFeaturesPipeline
+
+                svc.add_pipelines([
+                    FormFeaturesPipeline(self.db),
+                    GoalFeaturesPipeline(self.db),
+                    XgFeaturesPipeline(self.db),
+                    EloFeaturesPipeline(self.db),
+                    H2HFeaturesPipeline(self.db),
+                    AdvancedFeaturesPipeline(self.db),
+                ])
+                features = await svc.compute_match_features(match_id)
+                if features:
+                    await svc.store_features(match_id, features)
+                    await self.db.commit()
+                fs = await repo.get_by(match_id=match_id, feature_version=self.feature_version)
+
+            if fs is None:
+                raise ValueError(f"Could not compute features for match {match_id}")
 
         # Build feature vector matching training columns
         feature_columns = [
@@ -256,6 +265,182 @@ class PredictionGenerator:
 
         return X
 
+    async def _fetch_live_odds(
+        self, match: Match
+    ) -> dict[str, float] | None:
+        """Fetch live odds for a match from The Odds API.
+
+        Returns a dict with keys: odds_home_prob, odds_draw_prob,
+        odds_away_prob, odds_overround, odds_home_odds_raw,
+        odds_draw_odds_raw, odds_away_odds_raw
+        or None if unavailable.
+        """
+        # Check if this is a WC26 or other international match
+        league = match.league
+        if league is None:
+            return None
+
+        sport_key = SPORT_KEY_MAP.get(league.code)
+        if sport_key is None:
+            return None
+
+        try:
+            client = OddsAPIClient()
+            raw_matches = await client.get_odds(
+                sport_key=sport_key,
+                regions="uk",
+                markets="h2h",
+            )
+        except Exception as e:
+            logger.debug(f"Live odds fetch failed for league={league.code}: {e}")
+            return None
+        finally:
+            await client.close()
+
+        if not raw_matches:
+            return None
+
+        # Find the match by team names
+        home_name = match.home_team.name if match.home_team else ""
+        away_name = match.away_team.name if match.away_team else ""
+
+        # Apply team name mapping (DB -> Odds API)
+        odds_home = ODDS_API_TEAM_MAP.get(home_name, home_name)
+        odds_away = ODDS_API_TEAM_MAP.get(away_name, away_name)
+
+        for rm in raw_matches:
+            rm_home = rm.get("home_team", "")
+            rm_away = rm.get("away_team", "")
+            # Simple fuzzy-ish: both names must match
+            if rm_home == odds_home and rm_away == odds_away:
+                parsed = client.parse_odds(rm)
+                if not parsed:
+                    continue
+                best = parsed[0]
+                home_dec = best.get("home_odds")
+                draw_dec = best.get("draw_odds")
+                away_dec = best.get("away_odds")
+                if home_dec and draw_dec and away_dec:
+                    # Convert decimal odds to implied probabilities
+                    p_home = 1.0 / home_dec
+                    p_draw = 1.0 / draw_dec
+                    p_away = 1.0 / away_dec
+                    total = p_home + p_draw + p_away
+                    overround = total - 1.0
+                    return {
+                        "odds_home_prob": p_home / total,
+                        "odds_draw_prob": p_draw / total,
+                        "odds_away_prob": p_away / total,
+                        "odds_overround": overround,
+                        "odds_home_odds_raw": float(home_dec),
+                        "odds_draw_odds_raw": float(draw_dec),
+                        "odds_away_odds_raw": float(away_dec),
+                    }
+
+            # Try reverse (Odds API may swap home/away)
+            if rm_home == odds_away and rm_away == odds_home:
+                parsed = client.parse_odds(rm)
+                if not parsed:
+                    continue
+                best = parsed[0]
+                home_dec = best.get("home_odds")
+                draw_dec = best.get("draw_odds")
+                away_dec = best.get("away_odds")
+                if home_dec and draw_dec and away_dec:
+                    p_home = 1.0 / away_dec
+                    p_draw = 1.0 / draw_dec
+                    p_away = 1.0 / home_dec
+                    total = p_home + p_draw + p_away
+                    overround = total - 1.0
+                    return {
+                        "odds_home_prob": p_home / total,
+                        "odds_draw_prob": p_draw / total,
+                        "odds_away_prob": p_away / total,
+                        "odds_overround": overround,
+                        "odds_home_odds_raw": float(away_dec),
+                        "odds_draw_odds_raw": float(draw_dec),
+                        "odds_away_odds_raw": float(home_dec),
+                    }
+
+        return None
+
+    async def _compute_data_confidence(
+        self, fs: FeatureStore | None, match: Match
+    ) -> dict[str, Any]:
+        """Compute data confidence metrics for a prediction.
+
+        Returns:
+            dict with keys:
+              - data_confidence_score (0.0-1.0 overall)
+              - odds_sufficient (bool)
+              - player_data_sufficient (bool)
+              - history_sufficient (bool)
+        """
+        if fs is None:
+            return {
+                "data_confidence_score": 0.0,
+                "odds_sufficient": False,
+                "player_data_sufficient": False,
+                "history_sufficient": False,
+            }
+
+        # Odds check: are real odds available (not imputed)?
+        odds_cols = ["odds_home_prob", "odds_draw_prob", "odds_away_prob"]
+        odds_sufficient = all(
+            getattr(fs, c, None) is not None for c in odds_cols
+        )
+
+        # Player availability check
+        player_data_sufficient = bool(
+            getattr(fs, "player_data_available", False)
+        )
+
+        # History check: do both teams have enough recent matches?
+        from betting_bot.features.pipelines.form_features import FormFeaturesPipeline
+
+        min_history = 5
+        home_matches = 0
+        away_matches = 0
+        try:
+            form_pipeline = FormFeaturesPipeline(self.db)
+            if match.home_team_id:
+                recent = await form_pipeline._get_recent_matches(
+                    match.home_team_id, match.match_date, min_history
+                )
+                home_matches = len(recent)
+            if match.away_team_id:
+                recent = await form_pipeline._get_recent_matches(
+                    match.away_team_id, match.match_date, min_history
+                )
+                away_matches = len(recent)
+        except Exception:
+            pass
+        history_sufficient = home_matches >= min_history and away_matches >= min_history
+
+        # Composite score
+        scores = []
+        if odds_sufficient:
+            scores.append(1.0)
+        else:
+            scores.append(0.3)
+        if player_data_sufficient:
+            scores.append(1.0)
+        else:
+            scores.append(0.5)
+        if history_sufficient:
+            scores.append(1.0)
+        else:
+            scores.append(0.3)
+
+        composite = sum(scores) / len(scores) if scores else 0.0
+
+        return {
+            "data_confidence_score": round(composite, 3),
+            "odds_sufficient": odds_sufficient,
+            "player_data_sufficient": player_data_sufficient,
+            "history_sufficient": history_sufficient,
+        }
+
     async def predict_match(
         self,
         match_id: int,
@@ -266,6 +451,9 @@ class PredictionGenerator:
         Predicts match result (H/D/A), over/under 2.5 goals,
         and both teams to score (BTTS) using separate trained models.
         Falls back gracefully if a specific target model is unavailable.
+
+        For WC26 matches, attempts to fetch live odds from The Odds API
+        before falling back to training-time imputation.
         """
         # --- Load result model ---
         try:
@@ -280,18 +468,53 @@ class PredictionGenerator:
             logger.error(f"Match {match_id} not found")
             return None
 
-        try:
-            X, _feature_names = await self.get_features_for_match(match_id)
-        except ValueError as e:
-            logger.error(f"Cannot get features: {e}")
-            return None
+        # --- Load / compute FeatureStore ---
+        fs_repo = BaseRepository(FeatureStore, self.db)
+        fs = await fs_repo.get_by(match_id=match_id, feature_version=self.feature_version)
+
+        if fs is None:
+            logger.info(f"No features found for match {match_id}, computing...")
+            svc = FeatureEngineeringService(self.db, self.feature_version)
+            from betting_bot.features.pipelines.advanced_features import AdvancedFeaturesPipeline
+            from betting_bot.features.pipelines.elo_features import EloFeaturesPipeline
+            from betting_bot.features.pipelines.form_features import FormFeaturesPipeline
+            from betting_bot.features.pipelines.goal_features import GoalFeaturesPipeline
+            from betting_bot.features.pipelines.h2h_features import H2HFeaturesPipeline
+            from betting_bot.features.pipelines.xg_features import XgFeaturesPipeline
+
+            svc.add_pipelines([
+                FormFeaturesPipeline(self.db),
+                GoalFeaturesPipeline(self.db),
+                XgFeaturesPipeline(self.db),
+                EloFeaturesPipeline(self.db),
+                H2HFeaturesPipeline(self.db),
+                AdvancedFeaturesPipeline(self.db),
+            ])
+            features = await svc.compute_match_features(match_id)
+            if features:
+                await svc.store_features(match_id, features)
+                await self.db.commit()
+            fs = await fs_repo.get_by(match_id=match_id, feature_version=self.feature_version)
+
+        if fs is None:
+            raise ValueError(f"Could not compute features for match {match_id}")
+
+        # --- Attempt live odds for WC26 matches ---
+        odds_injected = False
+        if match.league and match.league.code in SPORT_KEY_MAP:
+            live_odds = await self._fetch_live_odds(match)
+            if live_odds:
+                for key, val in live_odds.items():
+                    if hasattr(fs, key):
+                        setattr(fs, key, val)
+                odds_injected = True
+                logger.info(f"Live odds injected for match {match_id}")
+
+        # --- Build feature vector (with live odds if injected) ---
+        X, _feature_names = await self.get_features_for_match(match_id, fs=fs)
 
         # Apply odds imputation using stored model medians
         X = self._apply_odds_imputation(X, result_clf)
-
-        # Load FeatureStore for expected goals computation
-        fs_repo = BaseRepository(FeatureStore, self.db)
-        fs = await fs_repo.get_by(match_id=match_id, feature_version=self.feature_version)
 
         # --- Predict match result (H/D/A) ---
         proba = result_clf.predict_proba(X)[0]
@@ -326,6 +549,10 @@ class PredictionGenerator:
 
         # --- Predict expected goals (use regression models if available) ---
         home_expected_goals, away_expected_goals = await self._predict_goals(X, fs)
+
+        # --- Data confidence (feature-level, not model confidence) ---
+        dc = await self._compute_data_confidence(fs, match)
+        data_confidence_score = dc["data_confidence_score"]
 
         # --- Generate explanation (use string refs to avoid lazy-load in sync method) ---
         is_knockout = bool(match.league and match.league.name and "World Cup" in match.league.name and match.round and match.round >= 4)
@@ -368,6 +595,7 @@ class PredictionGenerator:
             "confidence_level": confidence_level,
             "risk_score": risk_score,
             "risk_level": risk_level,
+            "data_confidence_score": data_confidence_score,
             "prediction_date": datetime.utcnow(),
             "explanation": explanation,
         }

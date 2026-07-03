@@ -1,0 +1,4488 @@
+{
+  "AC Ajaccio": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        307
+      ],
+      "total_matches": 2
+    }
+  },
+  "AC Milan": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "SA"
+      ],
+      "team_ids": [
+        188,
+        368
+      ],
+      "total_matches": 154
+    }
+  },
+  "AC Milan W": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        375
+      ],
+      "total_matches": 26
+    }
+  },
+  "AFC Bournemouth": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        345
+      ],
+      "total_matches": 38
+    }
+  },
+  "AS Monaco": {
+    "club": {
+      "leagues": [
+        "FL1",
+        "CHAMPIONS"
+      ],
+      "team_ids": [
+        189,
+        311
+      ],
+      "total_matches": 41
+    }
+  },
+  "AS Roma": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        363
+      ],
+      "total_matches": 152
+    }
+  },
+  "AS Roma W": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        376
+      ],
+      "total_matches": 26
+    }
+  },
+  "Ajax": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS"
+      ],
+      "team_ids": [
+        192
+      ],
+      "total_matches": 3
+    }
+  },
+  "Alavés": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        40
+      ],
+      "total_matches": 76
+    }
+  },
+  "Albacete": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        287
+      ],
+      "total_matches": 2
+    }
+  },
+  "Albania": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        402
+      ],
+      "total_matches": 3
+    }
+  },
+  "Algeria": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        168,
+        468
+      ],
+      "total_matches": 4
+    }
+  },
+  "Almería": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        277
+      ],
+      "total_matches": 87
+    }
+  },
+  "Angel City": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        337
+      ],
+      "total_matches": 23
+    }
+  },
+  "Angers": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        80
+      ],
+      "total_matches": 40
+    }
+  },
+  "Angola": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        170
+      ],
+      "total_matches": 5
+    }
+  },
+  "Argentina": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        117,
+        203
+      ],
+      "total_matches": 23
+    }
+  },
+  "Argentina U20": {
+    "international": {
+      "leagues": [
+        "FIFA U20 W"
+      ],
+      "team_ids": [
+        229
+      ],
+      "total_matches": 1
+    }
+  },
+  "Argentina Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        450
+      ],
+      "total_matches": 6
+    }
+  },
+  "Arsenal": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        1
+      ],
+      "total_matches": 190
+    }
+  },
+  "Arsenal WFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        225
+      ],
+      "total_matches": 79
+    }
+  },
+  "Aston Villa": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        2
+      ],
+      "total_matches": 154
+    }
+  },
+  "Aston Villa W": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        218
+      ],
+      "total_matches": 44
+    }
+  },
+  "Atalanta": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        41
+      ],
+      "total_matches": 152
+    }
+  },
+  "Athletic Club": {
+    "club": {
+      "leagues": [
+        "PD",
+        "COPA DEL R"
+      ],
+      "team_ids": [
+        21,
+        210
+      ],
+      "total_matches": 178
+    }
+  },
+  "Athletic Club Bilbao": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        294
+      ],
+      "total_matches": 30
+    }
+  },
+  "Atletico Madrid W": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        295
+      ],
+      "total_matches": 30
+    }
+  },
+  "Atlético Madrid": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "PD"
+      ],
+      "team_ids": [
+        22,
+        181
+      ],
+      "total_matches": 182
+    }
+  },
+  "Augsburg": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        61,
+        139
+      ],
+      "total_matches": 4
+    }
+  },
+  "Australia": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        129
+      ],
+      "total_matches": 8
+    }
+  },
+  "Australia Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        452
+      ],
+      "total_matches": 11
+    }
+  },
+  "Austria": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD",
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        391,
+        467
+      ],
+      "total_matches": 9
+    }
+  },
+  "Austria Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN"
+      ],
+      "team_ids": [
+        429
+      ],
+      "total_matches": 4
+    }
+  },
+  "Auxerre": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        81
+      ],
+      "total_matches": 2
+    }
+  },
+  "Barcelona": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "PD",
+        "COPA DEL R"
+      ],
+      "team_ids": [
+        23,
+        182,
+        211
+      ],
+      "total_matches": 645
+    }
+  },
+  "Barcelona WFC": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        292
+      ],
+      "total_matches": 30
+    }
+  },
+  "Bastia": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        318
+      ],
+      "total_matches": 37
+    }
+  },
+  "Bayer Leverkusen": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        62,
+        131
+      ],
+      "total_matches": 68
+    }
+  },
+  "Bayern Munich": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "UEFA EUROP",
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        63,
+        144,
+        184,
+        410
+      ],
+      "total_matches": 8
+    }
+  },
+  "Bayern München W": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        250
+      ],
+      "total_matches": 22
+    }
+  },
+  "Belgium": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        99,
+        398
+      ],
+      "total_matches": 21
+    }
+  },
+  "Belgium Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN"
+      ],
+      "team_ids": [
+        414
+      ],
+      "total_matches": 7
+    }
+  },
+  "Bengaluru": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        259
+      ],
+      "total_matches": 20
+    }
+  },
+  "Birmingham City": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        358
+      ],
+      "total_matches": 2
+    }
+  },
+  "Birmingham City WFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        226
+      ],
+      "total_matches": 53
+    }
+  },
+  "Blackburn Rovers": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        357
+      ],
+      "total_matches": 2
+    }
+  },
+  "Boca Juniors": {
+    "club": {
+      "leagues": [
+        "LIGA PROFE"
+      ],
+      "team_ids": [
+        305
+      ],
+      "total_matches": 2
+    }
+  },
+  "Bochum": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        64,
+        135
+      ],
+      "total_matches": 2
+    }
+  },
+  "Bolivia": {
+    "international": {
+      "leagues": [
+        "COPA AMERI"
+      ],
+      "team_ids": [
+        199
+      ],
+      "total_matches": 3
+    }
+  },
+  "Bologna": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        42
+      ],
+      "total_matches": 152
+    }
+  },
+  "Bolton Wanderers": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        359
+      ],
+      "total_matches": 2
+    }
+  },
+  "Bordeaux": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        315
+      ],
+      "total_matches": 38
+    }
+  },
+  "Borussia Dortmund": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        65,
+        133,
+        183
+      ],
+      "total_matches": 5
+    }
+  },
+  "Borussia Mönchengladbach": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        66,
+        146
+      ],
+      "total_matches": 4
+    }
+  },
+  "Bosnia & Herzegovina": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        466
+      ],
+      "total_matches": 1
+    }
+  },
+  "Bournemouth": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        3
+      ],
+      "total_matches": 114
+    }
+  },
+  "Brazil": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        98,
+        194
+      ],
+      "total_matches": 26
+    }
+  },
+  "Brazil Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        440
+      ],
+      "total_matches": 7
+    }
+  },
+  "Brentford": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        4
+      ],
+      "total_matches": 114
+    }
+  },
+  "Brest": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        82
+      ],
+      "total_matches": 0
+    }
+  },
+  "Brighton": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        5
+      ],
+      "total_matches": 114
+    }
+  },
+  "Brighton & Hove Albion WFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        214
+      ],
+      "total_matches": 79
+    }
+  },
+  "Bristol City WFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        222
+      ],
+      "total_matches": 78
+    }
+  },
+  "Burkina Faso": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        173
+      ],
+      "total_matches": 4
+    }
+  },
+  "Burnley": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        473
+      ],
+      "total_matches": 38
+    }
+  },
+  "CD Numancia de Soria": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        284
+      ],
+      "total_matches": 2
+    }
+  },
+  "CD Sporting de Huelva": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        301
+      ],
+      "total_matches": 30
+    }
+  },
+  "Cagliari": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        43
+      ],
+      "total_matches": 76
+    }
+  },
+  "Cameroon": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        158,
+        236
+      ],
+      "total_matches": 7
+    }
+  },
+  "Cameroon W": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        462
+      ],
+      "total_matches": 4
+    }
+  },
+  "Canada": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        207,
+        231
+      ],
+      "total_matches": 10
+    }
+  },
+  "Canada Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        455
+      ],
+      "total_matches": 7
+    }
+  },
+  "Cape Verde Islands": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        155,
+        469
+      ],
+      "total_matches": 6
+    }
+  },
+  "Carpi": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        361
+      ],
+      "total_matches": 38
+    }
+  },
+  "Celta Vigo": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        24
+      ],
+      "total_matches": 168
+    }
+  },
+  "Charlotte": {
+    "club": {
+      "leagues": [
+        "MAJOR LEAG"
+      ],
+      "team_ids": [
+        326
+      ],
+      "total_matches": 1
+    }
+  },
+  "Charlton Athletic": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        354
+      ],
+      "total_matches": 2
+    }
+  },
+  "Chelsea": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "PL"
+      ],
+      "team_ids": [
+        6,
+        185
+      ],
+      "total_matches": 155
+    }
+  },
+  "Chelsea FCW": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        220
+      ],
+      "total_matches": 78
+    }
+  },
+  "Chennaiyin": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        265
+      ],
+      "total_matches": 20
+    }
+  },
+  "Chicago Red Stars": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        340
+      ],
+      "total_matches": 29
+    }
+  },
+  "Chievo": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        362
+      ],
+      "total_matches": 38
+    }
+  },
+  "Chile": {
+    "international": {
+      "leagues": [
+        "COPA AMERI"
+      ],
+      "team_ids": [
+        201
+      ],
+      "total_matches": 3
+    }
+  },
+  "Chile Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        464
+      ],
+      "total_matches": 3
+    }
+  },
+  "China PR Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        436
+      ],
+      "total_matches": 7
+    }
+  },
+  "Cincinnati": {
+    "club": {
+      "leagues": [
+        "MAJOR LEAG"
+      ],
+      "team_ids": [
+        323
+      ],
+      "total_matches": 1
+    }
+  },
+  "Clermont Foot": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        306
+      ],
+      "total_matches": 3
+    }
+  },
+  "Colombia": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        119,
+        195
+      ],
+      "total_matches": 11
+    }
+  },
+  "Colombia Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        431
+      ],
+      "total_matches": 5
+    }
+  },
+  "Como": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        44
+      ],
+      "total_matches": 38
+    }
+  },
+  "Como W": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        377
+      ],
+      "total_matches": 26
+    }
+  },
+  "Congo DR": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        154
+      ],
+      "total_matches": 7
+    }
+  },
+  "Costa Adeje Tenerife": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        289
+      ],
+      "total_matches": 30
+    }
+  },
+  "Costa Rica": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        126,
+        208
+      ],
+      "total_matches": 9
+    }
+  },
+  "Costa Rica Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        443
+      ],
+      "total_matches": 3
+    }
+  },
+  "Cremonese": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        477
+      ],
+      "total_matches": 38
+    }
+  },
+  "Croatia": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        118,
+        386
+      ],
+      "total_matches": 22
+    }
+  },
+  "Crystal Palace": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        7
+      ],
+      "total_matches": 152
+    }
+  },
+  "Czech Republic": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        380
+      ],
+      "total_matches": 8
+    }
+  },
+  "Czechoslovakia": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        242
+      ],
+      "total_matches": 1
+    }
+  },
+  "Cádiz": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        270
+      ],
+      "total_matches": 79
+    }
+  },
+  "Córdoba CF": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        276
+      ],
+      "total_matches": 2
+    }
+  },
+  "Côte d'Ivoire": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        175
+      ],
+      "total_matches": 7
+    }
+  },
+  "Darmstadt 98": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        140
+      ],
+      "total_matches": 4
+    }
+  },
+  "Denmark": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        127,
+        399
+      ],
+      "total_matches": 17
+    }
+  },
+  "Denmark Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        416,
+        435
+      ],
+      "total_matches": 10
+    }
+  },
+  "Deportivo Alavés": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        266
+      ],
+      "total_matches": 11
+    }
+  },
+  "Duisburg WFC": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        253
+      ],
+      "total_matches": 22
+    }
+  },
+  "East Bengal": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        261
+      ],
+      "total_matches": 20
+    }
+  },
+  "Ecuador": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        202,
+        233
+      ],
+      "total_matches": 7
+    }
+  },
+  "Egypt": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        123,
+        153
+      ],
+      "total_matches": 8
+    }
+  },
+  "Eibar": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        272
+      ],
+      "total_matches": 48
+    }
+  },
+  "Eintracht Frankfurt": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        67,
+        138
+      ],
+      "total_matches": 4
+    }
+  },
+  "Eintracht Frankfurt W": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        248
+      ],
+      "total_matches": 22
+    }
+  },
+  "Elche": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        271
+      ],
+      "total_matches": 42
+    }
+  },
+  "Empoli": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        45
+      ],
+      "total_matches": 152
+    }
+  },
+  "England": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        101,
+        384
+      ],
+      "total_matches": 29
+    }
+  },
+  "England Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        419,
+        458
+      ],
+      "total_matches": 26
+    }
+  },
+  "Equatorial Guinea": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        174
+      ],
+      "total_matches": 4
+    }
+  },
+  "Espanyol": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        25
+      ],
+      "total_matches": 139
+    }
+  },
+  "Everton": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        8
+      ],
+      "total_matches": 154
+    }
+  },
+  "Everton LFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        221
+      ],
+      "total_matches": 77
+    }
+  },
+  "FC Heidenheim": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        145
+      ],
+      "total_matches": 2
+    }
+  },
+  "FC Internazionale Milano W": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        378
+      ],
+      "total_matches": 26
+    }
+  },
+  "FC Köln": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        134
+      ],
+      "total_matches": 4
+    }
+  },
+  "FC Levante Badalona": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        303
+      ],
+      "total_matches": 30
+    }
+  },
+  "FC Porto": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS"
+      ],
+      "team_ids": [
+        190
+      ],
+      "total_matches": 1
+    }
+  },
+  "FSV Mainz 05": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        141
+      ],
+      "total_matches": 4
+    }
+  },
+  "Finland": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        407
+      ],
+      "total_matches": 3
+    }
+  },
+  "Fiorentina": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "SA"
+      ],
+      "team_ids": [
+        46,
+        191
+      ],
+      "total_matches": 153
+    }
+  },
+  "Fiorentina W": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        371
+      ],
+      "total_matches": 26
+    }
+  },
+  "France": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        115,
+        389
+      ],
+      "total_matches": 26
+    }
+  },
+  "France Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        422,
+        438
+      ],
+      "total_matches": 19
+    }
+  },
+  "Freiburg": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        68,
+        143
+      ],
+      "total_matches": 2
+    }
+  },
+  "Frosinone": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        366
+      ],
+      "total_matches": 76
+    }
+  },
+  "Fulham": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        9
+      ],
+      "total_matches": 116
+    }
+  },
+  "Gambia": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        157
+      ],
+      "total_matches": 3
+    }
+  },
+  "Gazélec Ajaccio": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        320
+      ],
+      "total_matches": 37
+    }
+  },
+  "Genoa": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        47
+      ],
+      "total_matches": 114
+    }
+  },
+  "Georgia": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        392
+      ],
+      "total_matches": 4
+    }
+  },
+  "German DR": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        239
+      ],
+      "total_matches": 2
+    }
+  },
+  "Germany": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        109,
+        400
+      ],
+      "total_matches": 18
+    }
+  },
+  "Germany Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        421,
+        434
+      ],
+      "total_matches": 19
+    }
+  },
+  "Getafe": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        26
+      ],
+      "total_matches": 175
+    }
+  },
+  "Ghana": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        176,
+        237
+      ],
+      "total_matches": 7
+    }
+  },
+  "Gimnàstic Tarragona": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        286
+      ],
+      "total_matches": 1
+    }
+  },
+  "Girona": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        27
+      ],
+      "total_matches": 118
+    }
+  },
+  "Goa": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        262
+      ],
+      "total_matches": 20
+    }
+  },
+  "Granada": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        267
+      ],
+      "total_matches": 50
+    }
+  },
+  "Granada CF": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        476
+      ],
+      "total_matches": 38
+    }
+  },
+  "Granada W": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        302
+      ],
+      "total_matches": 30
+    }
+  },
+  "Guinea": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        166
+      ],
+      "total_matches": 5
+    }
+  },
+  "Guinea-Bissau": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        160
+      ],
+      "total_matches": 3
+    }
+  },
+  "Guingamp": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        319
+      ],
+      "total_matches": 38
+    }
+  },
+  "Haiti Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        437
+      ],
+      "total_matches": 3
+    }
+  },
+  "Hamburger SV": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        151
+      ],
+      "total_matches": 2
+    }
+  },
+  "Hannover 96": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        152
+      ],
+      "total_matches": 2
+    }
+  },
+  "Heidenheim": {
+    "club": {
+      "leagues": [
+        "BL1"
+      ],
+      "team_ids": [
+        69
+      ],
+      "total_matches": 0
+    }
+  },
+  "Hellas Verona": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        48
+      ],
+      "total_matches": 153
+    }
+  },
+  "Hertha Berlin": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        149
+      ],
+      "total_matches": 2
+    }
+  },
+  "Hoffenheim": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        70,
+        136
+      ],
+      "total_matches": 4
+    }
+  },
+  "Hoffenheim W": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        243
+      ],
+      "total_matches": 22
+    }
+  },
+  "Holstein Kiel": {
+    "club": {
+      "leagues": [
+        "BL1"
+      ],
+      "team_ids": [
+        71
+      ],
+      "total_matches": 0
+    }
+  },
+  "Houston Dash": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        330
+      ],
+      "total_matches": 27
+    }
+  },
+  "Huesca": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        269
+      ],
+      "total_matches": 3
+    }
+  },
+  "Hungary": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        381
+      ],
+      "total_matches": 6
+    }
+  },
+  "Hércules": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        280
+      ],
+      "total_matches": 2
+    }
+  },
+  "Iceland": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        121
+      ],
+      "total_matches": 3
+    }
+  },
+  "Iceland Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN"
+      ],
+      "team_ids": [
+        413
+      ],
+      "total_matches": 6
+    }
+  },
+  "Ingolstadt": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        148
+      ],
+      "total_matches": 2
+    }
+  },
+  "Inter": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        49
+      ],
+      "total_matches": 114
+    }
+  },
+  "Inter Miami": {
+    "club": {
+      "leagues": [
+        "MAJOR LEAG"
+      ],
+      "team_ids": [
+        321
+      ],
+      "total_matches": 6
+    }
+  },
+  "Inter Milan": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "SA"
+      ],
+      "team_ids": [
+        187,
+        360
+      ],
+      "total_matches": 40
+    }
+  },
+  "Ipswich Town": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        10
+      ],
+      "total_matches": 38
+    }
+  },
+  "Iran": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        111
+      ],
+      "total_matches": 6
+    }
+  },
+  "Italy": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        241,
+        387
+      ],
+      "total_matches": 12
+    }
+  },
+  "Italy Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        415,
+        449
+      ],
+      "total_matches": 16
+    }
+  },
+  "Jamaica": {
+    "international": {
+      "leagues": [
+        "COPA AMERI"
+      ],
+      "team_ids": [
+        196
+      ],
+      "total_matches": 3
+    }
+  },
+  "Jamaica Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        439
+      ],
+      "total_matches": 7
+    }
+  },
+  "Jamshedpur": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        260
+      ],
+      "total_matches": 22
+    }
+  },
+  "Japan": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        100
+      ],
+      "total_matches": 8
+    }
+  },
+  "Japan Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        442
+      ],
+      "total_matches": 9
+    }
+  },
+  "Juventus": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "SA"
+      ],
+      "team_ids": [
+        50,
+        180
+      ],
+      "total_matches": 156
+    }
+  },
+  "Juventus W": {
+    "club": {
+      "leagues": [
+        "UEFA EUROP",
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        370,
+        411
+      ],
+      "total_matches": 27
+    }
+  },
+  "KC Current": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        331
+      ],
+      "total_matches": 22
+    }
+  },
+  "Kerala Blasters": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        257
+      ],
+      "total_matches": 23
+    }
+  },
+  "Korea Republic Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        445
+      ],
+      "total_matches": 6
+    }
+  },
+  "Köln": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        252
+      ],
+      "total_matches": 22
+    }
+  },
+  "LAFC": {
+    "club": {
+      "leagues": [
+        "MAJOR LEAG"
+      ],
+      "team_ids": [
+        325
+      ],
+      "total_matches": 1
+    }
+  },
+  "Las Palmas": {
+    "club": {
+      "leagues": [
+        "PD",
+        "COPA DEL R"
+      ],
+      "team_ids": [
+        28,
+        213
+      ],
+      "total_matches": 119
+    }
+  },
+  "Lazio": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        51
+      ],
+      "total_matches": 152
+    }
+  },
+  "Le Havre": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        83
+      ],
+      "total_matches": 0
+    }
+  },
+  "Lecce": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        52
+      ],
+      "total_matches": 114
+    }
+  },
+  "Leeds": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        472
+      ],
+      "total_matches": 38
+    }
+  },
+  "Leeds United": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        356
+      ],
+      "total_matches": 2
+    }
+  },
+  "Leganés": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        29
+      ],
+      "total_matches": 46
+    }
+  },
+  "Leicester City": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        11
+      ],
+      "total_matches": 116
+    }
+  },
+  "Leicester City WFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        224
+      ],
+      "total_matches": 22
+    }
+  },
+  "Lens": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        84
+      ],
+      "total_matches": 3
+    }
+  },
+  "Levante UD": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        268
+      ],
+      "total_matches": 57
+    }
+  },
+  "Levante UD Femenino": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        297
+      ],
+      "total_matches": 30
+    }
+  },
+  "Lille": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        85
+      ],
+      "total_matches": 42
+    }
+  },
+  "Liverpool": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "PL"
+      ],
+      "team_ids": [
+        12,
+        178
+      ],
+      "total_matches": 158
+    }
+  },
+  "Liverpool WFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        223
+      ],
+      "total_matches": 55
+    }
+  },
+  "Lorient": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        312
+      ],
+      "total_matches": 41
+    }
+  },
+  "Luton": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        474
+      ],
+      "total_matches": 38
+    }
+  },
+  "Lyon": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        86
+      ],
+      "total_matches": 41
+    }
+  },
+  "Madrid CFF": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        293
+      ],
+      "total_matches": 30
+    }
+  },
+  "Mainz 05": {
+    "club": {
+      "leagues": [
+        "BL1"
+      ],
+      "team_ids": [
+        72
+      ],
+      "total_matches": 0
+    }
+  },
+  "Mali": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        163
+      ],
+      "total_matches": 5
+    }
+  },
+  "Mallorca": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        30
+      ],
+      "total_matches": 126
+    }
+  },
+  "Manchester City": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        13
+      ],
+      "total_matches": 154
+    }
+  },
+  "Manchester City WFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        216
+      ],
+      "total_matches": 80
+    }
+  },
+  "Manchester United": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "PL"
+      ],
+      "team_ids": [
+        14,
+        186
+      ],
+      "total_matches": 157
+    }
+  },
+  "Manchester United W": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        215
+      ],
+      "total_matches": 58
+    }
+  },
+  "Marseille": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        87
+      ],
+      "total_matches": 0
+    }
+  },
+  "Mauritania": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        167
+      ],
+      "total_matches": 4
+    }
+  },
+  "Metz": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        316
+      ],
+      "total_matches": 1
+    }
+  },
+  "Mexico": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        110,
+        206
+      ],
+      "total_matches": 12
+    }
+  },
+  "Middlesbrough": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        355
+      ],
+      "total_matches": 2
+    }
+  },
+  "Milan": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        53
+      ],
+      "total_matches": 0
+    }
+  },
+  "Mohun Bagan Super Giant": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        255
+      ],
+      "total_matches": 22
+    }
+  },
+  "Monaco": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        88
+      ],
+      "total_matches": 0
+    }
+  },
+  "Montpellier": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        89
+      ],
+      "total_matches": 41
+    }
+  },
+  "Monza": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        54
+      ],
+      "total_matches": 114
+    }
+  },
+  "Morocco": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        125,
+        171
+      ],
+      "total_matches": 15
+    }
+  },
+  "Morocco Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        430
+      ],
+      "total_matches": 4
+    }
+  },
+  "Mozambique": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        156
+      ],
+      "total_matches": 3
+    }
+  },
+  "Mumbai City": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        264
+      ],
+      "total_matches": 20
+    }
+  },
+  "Málaga": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        274
+      ],
+      "total_matches": 53
+    }
+  },
+  "NJ/NY Gotham FC": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        334
+      ],
+      "total_matches": 32
+    }
+  },
+  "NY Cosmos": {
+    "club": {
+      "leagues": [
+        "NORTH AMER"
+      ],
+      "team_ids": [
+        328
+      ],
+      "total_matches": 1
+    }
+  },
+  "Namibia": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        162
+      ],
+      "total_matches": 4
+    }
+  },
+  "Nantes": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        90
+      ],
+      "total_matches": 42
+    }
+  },
+  "Napoli": {
+    "club": {
+      "leagues": [
+        "UEFA EUROP",
+        "SA"
+      ],
+      "team_ids": [
+        55,
+        408
+      ],
+      "total_matches": 156
+    }
+  },
+  "Napoli W": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        374
+      ],
+      "total_matches": 26
+    }
+  },
+  "Nashville SC": {
+    "club": {
+      "leagues": [
+        "MAJOR LEAG"
+      ],
+      "team_ids": [
+        327
+      ],
+      "total_matches": 1
+    }
+  },
+  "Netherlands": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        232,
+        397
+      ],
+      "total_matches": 20
+    }
+  },
+  "Netherlands Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        424,
+        433
+      ],
+      "total_matches": 19
+    }
+  },
+  "New York Red Bulls": {
+    "club": {
+      "leagues": [
+        "MAJOR LEAG"
+      ],
+      "team_ids": [
+        324
+      ],
+      "total_matches": 1
+    }
+  },
+  "New Zealand Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        460
+      ],
+      "total_matches": 6
+    }
+  },
+  "Newcastle United": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        15
+      ],
+      "total_matches": 154
+    }
+  },
+  "Nice": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        91
+      ],
+      "total_matches": 0
+    }
+  },
+  "Nigeria": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        128,
+        161
+      ],
+      "total_matches": 10
+    }
+  },
+  "Nigeria Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        447
+      ],
+      "total_matches": 8
+    }
+  },
+  "North Carolina Courage": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        335
+      ],
+      "total_matches": 36
+    }
+  },
+  "North Macedonia": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        403
+      ],
+      "total_matches": 3
+    }
+  },
+  "NorthEast United": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        258
+      ],
+      "total_matches": 20
+    }
+  },
+  "Northern Ireland W": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN"
+      ],
+      "team_ids": [
+        428
+      ],
+      "total_matches": 3
+    }
+  },
+  "Norway": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        471
+      ],
+      "total_matches": 1
+    }
+  },
+  "Norway Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        412,
+        444
+      ],
+      "total_matches": 16
+    }
+  },
+  "Norwich City": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        349
+      ],
+      "total_matches": 38
+    }
+  },
+  "Nottingham Forest": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        16
+      ],
+      "total_matches": 114
+    }
+  },
+  "Nürnberg W": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        245
+      ],
+      "total_matches": 22
+    }
+  },
+  "OGC Nice": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        313
+      ],
+      "total_matches": 42
+    }
+  },
+  "Odisha": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        263
+      ],
+      "total_matches": 20
+    }
+  },
+  "Olympique de Marseille": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        309
+      ],
+      "total_matches": 42
+    }
+  },
+  "Orlando Pride": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        333
+      ],
+      "total_matches": 30
+    }
+  },
+  "Osasuna": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        31
+      ],
+      "total_matches": 134
+    }
+  },
+  "Palermo": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        365
+      ],
+      "total_matches": 38
+    }
+  },
+  "Panama": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        102,
+        209
+      ],
+      "total_matches": 7
+    }
+  },
+  "Panama Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        441
+      ],
+      "total_matches": 3
+    }
+  },
+  "Panathinaikos": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS"
+      ],
+      "team_ids": [
+        193
+      ],
+      "total_matches": 1
+    }
+  },
+  "Paraguay": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        204,
+        470
+      ],
+      "total_matches": 4
+    }
+  },
+  "Paris Saint-Germain": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        92
+      ],
+      "total_matches": 95
+    }
+  },
+  "Parma": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        56
+      ],
+      "total_matches": 38
+    }
+  },
+  "Peru": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        116,
+        200
+      ],
+      "total_matches": 7
+    }
+  },
+  "Philippines Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        461
+      ],
+      "total_matches": 3
+    }
+  },
+  "Poland": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        103,
+        390
+      ],
+      "total_matches": 13
+    }
+  },
+  "Poland Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN"
+      ],
+      "team_ids": [
+        425
+      ],
+      "total_matches": 3
+    }
+  },
+  "Pomigliano": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        369
+      ],
+      "total_matches": 26
+    }
+  },
+  "Portland Thorns": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        341
+      ],
+      "total_matches": 30
+    }
+  },
+  "Portsmouth": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        353
+      ],
+      "total_matches": 2
+    }
+  },
+  "Portugal": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        124,
+        379
+      ],
+      "total_matches": 19
+    }
+  },
+  "Portugal Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        426,
+        454
+      ],
+      "total_matches": 9
+    }
+  },
+  "Qatar": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        238
+      ],
+      "total_matches": 3
+    }
+  },
+  "RB Leipzig": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        73,
+        147
+      ],
+      "total_matches": 2
+    }
+  },
+  "RB Leipzig W": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        249
+      ],
+      "total_matches": 22
+    }
+  },
+  "RC Deportivo La Coruña": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        273
+      ],
+      "total_matches": 53
+    }
+  },
+  "Racing Louisville FC": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        338
+      ],
+      "total_matches": 22
+    }
+  },
+  "Racing Santander": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        279
+      ],
+      "total_matches": 13
+    }
+  },
+  "Rayo Vallecano": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        32
+      ],
+      "total_matches": 161
+    }
+  },
+  "Reading WFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        227
+      ],
+      "total_matches": 56
+    }
+  },
+  "Real Betis": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        33
+      ],
+      "total_matches": 172
+    }
+  },
+  "Real Betis Balompié": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        298
+      ],
+      "total_matches": 30
+    }
+  },
+  "Real Madrid": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "PD",
+        "COPA DEL R"
+      ],
+      "team_ids": [
+        34,
+        179,
+        212
+      ],
+      "total_matches": 185
+    }
+  },
+  "Real Madrid CF W": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        288
+      ],
+      "total_matches": 30
+    }
+  },
+  "Real Murcia CF": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        285
+      ],
+      "total_matches": 1
+    }
+  },
+  "Real Sociedad": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        35
+      ],
+      "total_matches": 173
+    }
+  },
+  "Real Sociedad de Fútbol": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        296
+      ],
+      "total_matches": 30
+    }
+  },
+  "Real Valladolid": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        36
+      ],
+      "total_matches": 89
+    }
+  },
+  "Real Zaragoza": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        278
+      ],
+      "total_matches": 12
+    }
+  },
+  "Recreativo Huelva": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        283
+      ],
+      "total_matches": 5
+    }
+  },
+  "Reims": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        93
+      ],
+      "total_matches": 0
+    }
+  },
+  "Rennes": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        94
+      ],
+      "total_matches": 42
+    }
+  },
+  "Republic of Ireland Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        446
+      ],
+      "total_matches": 3
+    }
+  },
+  "River Plate": {
+    "club": {
+      "leagues": [
+        "LIGA PROFE"
+      ],
+      "team_ids": [
+        304
+      ],
+      "total_matches": 2
+    }
+  },
+  "Roma": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        57
+      ],
+      "total_matches": 0
+    }
+  },
+  "Romania": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        240,
+        394
+      ],
+      "total_matches": 5
+    }
+  },
+  "Russia": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        122,
+        406
+      ],
+      "total_matches": 8
+    }
+  },
+  "SC Delhi": {
+    "club": {
+      "leagues": [
+        "INDIAN SUP"
+      ],
+      "team_ids": [
+        256
+      ],
+      "total_matches": 23
+    }
+  },
+  "SC Freiburg": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        74,
+        244
+      ],
+      "total_matches": 22
+    }
+  },
+  "SD Eibar": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        291
+      ],
+      "total_matches": 30
+    }
+  },
+  "SGS Essen 19/68": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        254
+      ],
+      "total_matches": 22
+    }
+  },
+  "SV Werder Bremen": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        247
+      ],
+      "total_matches": 22
+    }
+  },
+  "Saint-Étienne": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        95
+      ],
+      "total_matches": 39
+    }
+  },
+  "Salernitana": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        478
+      ],
+      "total_matches": 76
+    }
+  },
+  "Sampdoria": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        364
+      ],
+      "total_matches": 76
+    }
+  },
+  "Sampdoria W": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        373
+      ],
+      "total_matches": 26
+    }
+  },
+  "San Diego Wave": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        332
+      ],
+      "total_matches": 23
+    }
+  },
+  "Sassuolo": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        367
+      ],
+      "total_matches": 114
+    }
+  },
+  "Sassuolo W": {
+    "club": {
+      "leagues": [
+        "SERIE A WO"
+      ],
+      "team_ids": [
+        372
+      ],
+      "total_matches": 26
+    }
+  },
+  "Saudi Arabia": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        114
+      ],
+      "total_matches": 6
+    }
+  },
+  "Schalke 04": {
+    "club": {
+      "leagues": [
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        150
+      ],
+      "total_matches": 2
+    }
+  },
+  "Scotland": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        401
+      ],
+      "total_matches": 6
+    }
+  },
+  "Scotland W": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        465
+      ],
+      "total_matches": 3
+    }
+  },
+  "Seattle Reign": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        339
+      ],
+      "total_matches": 32
+    }
+  },
+  "Seattle Sounders": {
+    "club": {
+      "leagues": [
+        "NORTH AMER"
+      ],
+      "team_ids": [
+        329
+      ],
+      "total_matches": 1
+    }
+  },
+  "Senegal": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        104,
+        159
+      ],
+      "total_matches": 11
+    }
+  },
+  "Serbia": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        105,
+        383
+      ],
+      "total_matches": 9
+    }
+  },
+  "Sevilla": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        37
+      ],
+      "total_matches": 180
+    }
+  },
+  "Sevilla FC": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        290
+      ],
+      "total_matches": 30
+    }
+  },
+  "Sheffield Utd": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        475
+      ],
+      "total_matches": 38
+    }
+  },
+  "Slovakia": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        396
+      ],
+      "total_matches": 7
+    }
+  },
+  "Slovenia": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        385
+      ],
+      "total_matches": 4
+    }
+  },
+  "South Africa": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        165
+      ],
+      "total_matches": 7
+    }
+  },
+  "South Africa Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        456
+      ],
+      "total_matches": 7
+    }
+  },
+  "South Korea": {
+    "international": {
+      "leagues": [
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        108
+      ],
+      "total_matches": 7
+    }
+  },
+  "Southampton": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        17
+      ],
+      "total_matches": 116
+    }
+  },
+  "Soviet Union U20": {
+    "international": {
+      "leagues": [
+        "FIFA U20 W"
+      ],
+      "team_ids": [
+        230
+      ],
+      "total_matches": 1
+    }
+  },
+  "Spain": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        112,
+        388
+      ],
+      "total_matches": 22
+    }
+  },
+  "Spain Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        420,
+        457
+      ],
+      "total_matches": 21
+    }
+  },
+  "Spezia": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        479
+      ],
+      "total_matches": 39
+    }
+  },
+  "Sporting Gijón": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        275
+      ],
+      "total_matches": 44
+    }
+  },
+  "St. Pauli": {
+    "club": {
+      "leagues": [
+        "BL1"
+      ],
+      "team_ids": [
+        75
+      ],
+      "total_matches": 0
+    }
+  },
+  "Stade Brestois": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        308
+      ],
+      "total_matches": 2
+    }
+  },
+  "Stade Malherbe Caen": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        317
+      ],
+      "total_matches": 38
+    }
+  },
+  "Stade de Reims": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        310
+      ],
+      "total_matches": 41
+    }
+  },
+  "Stoke City": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        350
+      ],
+      "total_matches": 38
+    }
+  },
+  "Strasbourg": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        96
+      ],
+      "total_matches": 2
+    }
+  },
+  "Stuttgart": {
+    "club": {
+      "leagues": [
+        "BL1"
+      ],
+      "team_ids": [
+        76
+      ],
+      "total_matches": 0
+    }
+  },
+  "Sunderland": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        344
+      ],
+      "total_matches": 38
+    }
+  },
+  "Swansea City": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        343
+      ],
+      "total_matches": 38
+    }
+  },
+  "Sweden": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        107,
+        404
+      ],
+      "total_matches": 11
+    }
+  },
+  "Sweden Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        417,
+        451
+      ],
+      "total_matches": 23
+    }
+  },
+  "Switzerland": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        106,
+        382
+      ],
+      "total_matches": 19
+    }
+  },
+  "Switzerland Women's": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN",
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        418,
+        459
+      ],
+      "total_matches": 11
+    }
+  },
+  "TSV Bayer 04 Leverkusen": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        251
+      ],
+      "total_matches": 22
+    }
+  },
+  "Tanzania": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        172
+      ],
+      "total_matches": 3
+    }
+  },
+  "Tenerife": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        281
+      ],
+      "total_matches": 2
+    }
+  },
+  "Thailand W": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        463
+      ],
+      "total_matches": 3
+    }
+  },
+  "Torino": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        58
+      ],
+      "total_matches": 152
+    }
+  },
+  "Toronto FC": {
+    "club": {
+      "leagues": [
+        "MAJOR LEAG"
+      ],
+      "team_ids": [
+        322
+      ],
+      "total_matches": 1
+    }
+  },
+  "Tottenham": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        18
+      ],
+      "total_matches": 114
+    }
+  },
+  "Tottenham Hotspur": {
+    "club": {
+      "leagues": [
+        "CHAMPIONS",
+        "PL"
+      ],
+      "team_ids": [
+        177,
+        348
+      ],
+      "total_matches": 41
+    }
+  },
+  "Tottenham Hotspur Women": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        217
+      ],
+      "total_matches": 58
+    }
+  },
+  "Toulouse": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        97
+      ],
+      "total_matches": 40
+    }
+  },
+  "Troyes": {
+    "club": {
+      "leagues": [
+        "FL1"
+      ],
+      "team_ids": [
+        314
+      ],
+      "total_matches": 39
+    }
+  },
+  "Tunisia": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        120,
+        169
+      ],
+      "total_matches": 9
+    }
+  },
+  "Turkey": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        393
+      ],
+      "total_matches": 8
+    }
+  },
+  "Udinese": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        59
+      ],
+      "total_matches": 152
+    }
+  },
+  "Ukraine": {
+    "international": {
+      "leagues": [
+        "UEFA EURO"
+      ],
+      "team_ids": [
+        395
+      ],
+      "total_matches": 8
+    }
+  },
+  "Union Berlin": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        77,
+        130
+      ],
+      "total_matches": 2
+    }
+  },
+  "United States": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        205,
+        234
+      ],
+      "total_matches": 9
+    }
+  },
+  "United States Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        432
+      ],
+      "total_matches": 11
+    }
+  },
+  "Uruguay": {
+    "international": {
+      "leagues": [
+        "COPA AMERI",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        113,
+        198
+      ],
+      "total_matches": 15
+    }
+  },
+  "Utah Royals": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        342
+      ],
+      "total_matches": 9
+    }
+  },
+  "Valencia": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        38
+      ],
+      "total_matches": 179
+    }
+  },
+  "Valencia CF": {
+    "club": {
+      "leagues": [
+        "LIGA F"
+      ],
+      "team_ids": [
+        299
+      ],
+      "total_matches": 30
+    }
+  },
+  "Venezia": {
+    "club": {
+      "leagues": [
+        "SA"
+      ],
+      "team_ids": [
+        60
+      ],
+      "total_matches": 38
+    }
+  },
+  "Venezuela": {
+    "international": {
+      "leagues": [
+        "COPA AMERI"
+      ],
+      "team_ids": [
+        197
+      ],
+      "total_matches": 4
+    }
+  },
+  "VfB Stuttgart": {
+    "club": {
+      "leagues": [
+        "UEFA EUROP",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        132,
+        409
+      ],
+      "total_matches": 5
+    }
+  },
+  "VfL Wolfsburg WFC": {
+    "club": {
+      "leagues": [
+        "FRAUEN BUN"
+      ],
+      "team_ids": [
+        246
+      ],
+      "total_matches": 22
+    }
+  },
+  "Vietnam Women's": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        448
+      ],
+      "total_matches": 3
+    }
+  },
+  "Villarreal": {
+    "club": {
+      "leagues": [
+        "PD",
+        "LIGA F"
+      ],
+      "team_ids": [
+        39,
+        300
+      ],
+      "total_matches": 205
+    }
+  },
+  "WNT Finland": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN"
+      ],
+      "team_ids": [
+        427
+      ],
+      "total_matches": 6
+    }
+  },
+  "Wales": {
+    "international": {
+      "leagues": [
+        "UEFA EURO",
+        "FIFA WORLD"
+      ],
+      "team_ids": [
+        235,
+        405
+      ],
+      "total_matches": 7
+    }
+  },
+  "Wales W": {
+    "international": {
+      "leagues": [
+        "UEFA WOMEN"
+      ],
+      "team_ids": [
+        423
+      ],
+      "total_matches": 3
+    }
+  },
+  "Washington Spirit": {
+    "club": {
+      "leagues": [
+        "NWSL"
+      ],
+      "team_ids": [
+        336
+      ],
+      "total_matches": 31
+    }
+  },
+  "Watford": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        347
+      ],
+      "total_matches": 38
+    }
+  },
+  "Werder Bremen": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        78,
+        137
+      ],
+      "total_matches": 4
+    }
+  },
+  "West Bromwich Albion": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        346
+      ],
+      "total_matches": 38
+    }
+  },
+  "West Ham": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        19
+      ],
+      "total_matches": 114
+    }
+  },
+  "West Ham United": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        351
+      ],
+      "total_matches": 38
+    }
+  },
+  "West Ham United LFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        219
+      ],
+      "total_matches": 78
+    }
+  },
+  "Wolfsburg": {
+    "club": {
+      "leagues": [
+        "BL1",
+        "1. BUNDESL"
+      ],
+      "team_ids": [
+        79,
+        142
+      ],
+      "total_matches": 4
+    }
+  },
+  "Wolverhampton Wanderers": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        352
+      ],
+      "total_matches": 2
+    }
+  },
+  "Wolves": {
+    "club": {
+      "leagues": [
+        "PL"
+      ],
+      "team_ids": [
+        20
+      ],
+      "total_matches": 114
+    }
+  },
+  "Xerez": {
+    "club": {
+      "leagues": [
+        "PD"
+      ],
+      "team_ids": [
+        282
+      ],
+      "total_matches": 2
+    }
+  },
+  "Yeovil Town LFC": {
+    "club": {
+      "leagues": [
+        "FA WOMEN'S"
+      ],
+      "team_ids": [
+        228
+      ],
+      "total_matches": 19
+    }
+  },
+  "Zambia": {
+    "international": {
+      "leagues": [
+        "AFRICAN CU"
+      ],
+      "team_ids": [
+        164
+      ],
+      "total_matches": 3
+    }
+  },
+  "Zambia W": {
+    "international": {
+      "leagues": [
+        "WOMEN'S WO"
+      ],
+      "team_ids": [
+        453
+      ],
+      "total_matches": 3
+    }
+  }
+}

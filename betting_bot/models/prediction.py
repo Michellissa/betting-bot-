@@ -32,6 +32,7 @@ class Prediction(IntegerIDMixin, TimestampMixin, Base):
     confidence_score: Mapped[float | None] = MappedColumn(Float)
     confidence_level: Mapped[str | None] = MappedColumn(String(20))
     model_confidence: Mapped[float | None] = MappedColumn(Float)
+    data_confidence_score: Mapped[float | None] = MappedColumn(Float, nullable=True)
 
     # Risk
     risk_score: Mapped[float | None] = MappedColumn(Float)

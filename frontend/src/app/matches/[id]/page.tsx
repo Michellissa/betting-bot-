@@ -1,6 +1,7 @@
 import { api } from "@/lib/api";
 import MatchCard from "@/components/match-card";
 import PredictionBadge from "@/components/prediction-badge";
+import LiveScoreOverlay from "@/components/live-score-overlay";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -55,6 +56,14 @@ export default async function MatchDetailPage({
 
       <MatchCard match={match} />
 
+      {!match.is_finished && match.home_team && match.away_team && (
+        <LiveScoreOverlay
+          homeTeam={match.home_team.name}
+          awayTeam={match.away_team.name}
+          matchDate={match.match_date}
+        />
+      )}
+
       <section>
         <h2 className="text-lg font-semibold text-zinc-900 mb-4">
           Predictions
@@ -99,6 +108,19 @@ export default async function MatchDetailPage({
                     >
                       Risk: {pred.risk_level.replace("_", " ")}
                     </span>
+                    {pred.data_confidence_score !== null && pred.data_confidence_score !== undefined && (
+                      <span
+                        className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                          pred.data_confidence_score >= 0.7
+                            ? "bg-emerald-100 text-emerald-700"
+                            : pred.data_confidence_score >= 0.4
+                              ? "bg-amber-100 text-amber-700"
+                              : "bg-red-100 text-red-700"
+                        }`}
+                      >
+                        Data: {(pred.data_confidence_score * 100).toFixed(0)}%
+                      </span>
+                    )}
                   </div>
                 </div>
                 <PredictionBadge
@@ -106,6 +128,7 @@ export default async function MatchDetailPage({
                   draw={pred.draw_probability}
                   awayWin={pred.away_win_probability}
                   confidence={pred.confidence_score}
+                  dataConfidence={pred.data_confidence_score}
                   over25={pred.over_2_5_probability}
                   bttsYes={pred.btts_yes_probability}
                   predictedScore={pred.predicted_score}

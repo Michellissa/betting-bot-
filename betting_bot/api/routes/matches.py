@@ -60,17 +60,40 @@ async def list_matches(
 async def live_matches(
     limit: int = Query(20, ge=1, le=100),
 ):
-    """Fetch live football matches from SportScore."""
+    """Fetch live football matches from SportScore.
+
+    Disables file-based caching so live scores are always fresh.
+    """
     from betting_bot.services.sportscore_client import SportScoreClient
 
     client = SportScoreClient()
     try:
-        data = await client.get_matches(sport="football", limit=limit)
-        matches = data.get("data", [])
+        data = await client.get_matches(sport="football", limit=limit, use_cache=False)
+        matches = data.get("matches", [])
         parsed = [client.parse_match_summary(m) for m in matches]
         return {"matches": parsed, "source": "sportscore", "total": len(parsed)}
     except Exception as e:
         return {"matches": [], "source": "sportscore", "error": str(e), "total": 0}
+    finally:
+        await client.close()
+
+
+@router.get("/live/{slug}")
+async def live_match_detail(slug: str):
+    """Fetch live match detail (with incidents/goals) from SportScore by slug.
+
+    The slug is the URL path segment from SportScore, e.g.
+    ``portugal-vs-croatia-jul-2-2026``.
+    """
+    from betting_bot.services.sportscore_client import SportScoreClient
+
+    client = SportScoreClient()
+    try:
+        data = await client.get_match_detail(slug=slug, sport="football")
+        parsed = client.parse_match_detail(data)
+        return {"match": parsed, "source": "sportscore", "updated": data.get("updated", "")}
+    except Exception as e:
+        return {"match": None, "source": "sportscore", "error": str(e)}
     finally:
         await client.close()
 

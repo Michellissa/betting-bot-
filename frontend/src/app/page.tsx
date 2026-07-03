@@ -174,6 +174,7 @@ export default async function DashboardPage() {
                       draw={pred.draw_probability}
                       awayWin={pred.away_win_probability}
                       confidence={pred.confidence_score}
+                      dataConfidence={pred.data_confidence_score}
                       over25={pred.over_2_5_probability}
                       bttsYes={pred.btts_yes_probability}
                       predictedScore={pred.predicted_score}

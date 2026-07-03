@@ -3,6 +3,7 @@ interface PredictionBadgeProps {
   draw: number;
   awayWin: number;
   confidence?: number;
+  dataConfidence?: number | null;
   over25?: number | null;
   bttsYes?: number | null;
   predictedScore?: string | null;
@@ -13,6 +14,7 @@ export default function PredictionBadge({
   draw,
   awayWin,
   confidence,
+  dataConfidence,
   over25,
   bttsYes,
   predictedScore,
@@ -81,7 +83,7 @@ export default function PredictionBadge({
         </div>
       )}
 
-      {/* Over/Under 2.5 & BTTS */}
+      {/* Over/Under 2.5 & BTTS & Data Confidence */}
       <div className="flex gap-4 text-xs">
         {over25 !== null && over25 !== undefined && (
           <div>
@@ -96,6 +98,14 @@ export default function PredictionBadge({
             <span className="text-zinc-400">BTTS </span>
             <span className="font-medium">
               {(bttsYes * 100).toFixed(0)}%
+            </span>
+          </div>
+        )}
+        {dataConfidence !== null && dataConfidence !== undefined && (
+          <div>
+            <span className="text-zinc-400">Data </span>
+            <span className={`font-medium ${dataConfidence >= 0.7 ? "text-emerald-600" : dataConfidence >= 0.4 ? "text-amber-600" : "text-red-600"}`}>
+              {(dataConfidence * 100).toFixed(0)}%
             </span>
           </div>
         )}

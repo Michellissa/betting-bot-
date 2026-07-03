@@ -74,6 +74,7 @@ export interface Prediction {
   explanation: string | null;
   confidence_score: number;
   confidence_level: string;
+  data_confidence_score: number | null;
   risk_score: number;
   risk_level: string;
   match?: Match;
@@ -151,6 +152,49 @@ export interface WCTeamInfo {
   groups: string;
 }
 
+// --- Live scores (SportScore) types ---
+
+export interface LiveMatch {
+  external_id: string;
+  source: string;
+  match_date: string | null;
+  status: string;
+  status_text: string | null;
+  home_team_name: string;
+  away_team_name: string;
+  home_team_logo: string | null;
+  away_team_logo: string | null;
+  home_goals: number | null;
+  away_goals: number | null;
+  result: string | null;
+  live_minute?: number | null;
+  goals?: LiveGoal[];
+  incidents?: unknown[];
+}
+
+export interface LiveGoal {
+  minute: number;
+  player: string;
+  side: string;
+  type: string;
+  home_score: number;
+  away_score: number;
+}
+
+export interface LiveMatchesResponse {
+  matches: LiveMatch[];
+  source: string;
+  total: number;
+  error?: string;
+}
+
+export interface LiveMatchDetailResponse {
+  match: LiveMatch;
+  source: string;
+  updated: string;
+  error?: string;
+}
+
 export const api = {
   health: () => fetchApi<{ status: string }>("/api/v1/health"),
 
@@ -178,6 +222,13 @@ export const api = {
   },
 
   getMatch: (id: number) => fetchApi<Match>(`/api/v1/matches/${id}`),
+
+  // Live scores (SportScore)
+  getLiveMatches: (limit = 50) =>
+    fetchApi<LiveMatchesResponse>(`/api/v1/matches/live?limit=${limit}`, { cache: "no-store" }),
+
+  getLiveMatchDetail: (slug: string) =>
+    fetchApi<LiveMatchDetailResponse>(`/api/v1/matches/live/${slug}`, { cache: "no-store" }),
 
   // Predictions
   getPredictions: (params?: {

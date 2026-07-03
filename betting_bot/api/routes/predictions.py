@@ -32,6 +32,7 @@ class PredictionResponse(BaseModel):
     away_expected_goals: float | None = None
     confidence_score: float
     risk_score: float
+    data_confidence_score: float | None = None
 
 
 class TeamResponse(BaseModel):
@@ -76,6 +77,7 @@ class PredictionListResponse(BaseModel):
     is_active: bool = True
     model_version: str | None = None
     explanation: str | None = None
+    data_confidence_score: float | None = None
     match: MatchResponse | None = None
 
 
@@ -97,8 +99,11 @@ async def predict_match(
         away_win_probability=pred.away_win_probability or 0.0,
         over_2_5_probability=pred.over_2_5_probability,
         btts_yes_probability=pred.btts_yes_probability,
+        home_expected_goals=pred.home_expected_goals,
+        away_expected_goals=pred.away_expected_goals,
         confidence_score=pred.confidence_score or 0.0,
         risk_score=pred.risk_score or 0.0,
+        data_confidence_score=pred.data_confidence_score,
     )
 
 
@@ -162,6 +167,7 @@ async def upcoming_predictions(
             is_active=p.is_active,
             model_version=p.model_version,
             explanation=p.explanation,
+            data_confidence_score=p.data_confidence_score,
             match=match_resp,
         )
         result_list.append(item)
